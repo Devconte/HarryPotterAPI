@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= character.name%></title>
+    <link rel="stylesheet" href="/css/stylechars.css">
+</head>
+<body>
+    <div class="char-container">
+      <h1><%= character.name %></h1>
+      <img src="<%= character.image%>" alt="">
+      <p>Species: <%= character.species%></p>
+      <p>Gender :<%= character.gender %></p>
+      <% if (character.wizard) { %>
+          <p>This character is a wizard</p>
+      <% } else { %>
+      <p>This character is not a wizard</p>
+       <% } %>
+      <% if (character.hogwartsStudent && character.house) { %>
+          <p>This character is/was a student at Hogwarts.</p>
+          <p>He/She belongs to the house : <%= character.house %></p>
+        <% } else { %>
+          <p>This character is not a student at Hogwarts.</p>
+          <% if (character.house) { %>
+              <p>House: <%= character.house %></p>
+            <% } %>
+          <% } %>
+      <% if (character.dateOfBirth) { %>
+          <p>Date of birth: <%= character.dateOfBirth %></p>
+      <% } %>
+      
+      <% if (character.ancestry){ %>
+      <p>Ancestry: <%= character.ancestry%></p>
+      <%}%>
+      
+      <p>Eye Color: <%= character.eyeColour%></p>
+      <p>Hair Color: <%= character.hairColour %></p>
+      <% if (character.wand.length > 0) { %>
+      <h3>Wand</h3>
+      <p>Wood: <%= character.wand.wood %></p>
+      <p>Core: <%= character.wand.core %></p>
+      <p>Length: <%= character.wand.length%> inches</p>
+      <% } else { %>
+          <p>This character does not have a wand or we don't have the information about it.</p>
+        <% } %>
+      <p>Movie Actor : <%= character.actor %></p>
+    </div>
+</body>
+</html>

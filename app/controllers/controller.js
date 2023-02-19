@@ -12,6 +12,9 @@ const controller = {
   },
   renderCharactersView: (req, res, characters) => {
     res.render('characters', { characters: characters });
+  },
+  renderClickedCharactersView: (req, res, character) => {
+    res.render('character', { character: character });
   }
 };
 

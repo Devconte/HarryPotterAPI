@@ -18,5 +18,18 @@ router.get('/characters', async (req, res, next) => {
     }
   });
 
+router.get('/characters/:character', async (req, res, next) => {
+    try {
+      const characters = await fetch('https://hp-api.onrender.com/api/characters').then(res => res.json());
+      const character = characters.find(char => char.name.toLowerCase() === req.params.character.toLowerCase());
+      if (!character) {
+        return res.status(404).send('Character not found');
+      }
+      controller.renderClickedCharactersView(req, res, character);
+    } catch (err) {
+      next(err);
+    }
+});
+
 
 module.exports = router;

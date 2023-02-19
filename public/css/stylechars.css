@@ -1,0 +1,41 @@
+body {
+    background-image: url('/images/harry-potter-hogwarts-is-my-home-background-scaled.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+h1{
+    font-size: 5rem;
+    text-align: center;
+}
+  
+ul {
+    column-count: 9;
+    
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+   
+    
+}
+
+li {
+    list-style-type:none;
+    margin-bottom:  20px;
+   
+}
+
+p {
+   
+}
+
+.char-container {
+    font-size: 2rem;
+    text-align: center;
+}

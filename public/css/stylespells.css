@@ -1,0 +1,26 @@
+body {
+    background-image: url('/images/2209_w018_n002_1281a_p30_1281.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;  
+    color: white;
+}
+
+.spell-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+.spell-item {
+    width: calc(50% - 20px);
+    margin: 10px;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}

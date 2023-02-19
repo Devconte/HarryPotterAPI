@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>List of Harry Potter Characters</title>
+    <link rel="stylesheet" href="/css/stylechars.css">
 </head>
 <body>
     <h1>Harry Potter Characters</h1>
-<ul>
-  <% characters.forEach(character => { %>
-    <li><%= character.name %></li>
+<ul> <!-- The localeCompare() method compares two strings and returns a number that represents their relative order. This method can be used with the sort() method to sort an array of objects by a specific property. -->
+  <% characters.sort((a, b) => a.name.localeCompare(b.name)).forEach(character => { %>
+    <li><a href="/characters/<%= character.name %>"><%= character.name %></a></li>
+    
   <% }); %>
 </ul>
 </body>

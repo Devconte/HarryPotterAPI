@@ -1,3 +1,37 @@
 body {
     background-image: url('/images/wallpaperflare.com_wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
 }
+
+html {
+    height: 100%;
+}
+ 
+.presentation {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    background-color: purple;
+    padding: 20px;
+}
+
+.links {
+    text-align: center;
+}
+.links a {
+    text-decoration: none;
+    color: white;
+    font-size: 5rem;
+    margin: 0 auto;
+}
+
+
+h1 {
+    font-size: 6rem;
+    text-align: center;
+}
+
