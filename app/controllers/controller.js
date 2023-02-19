@@ -1,5 +1,4 @@
 
-
 const controller = {
   /**
      * Affichage de la page principale
@@ -8,6 +7,16 @@ const controller = {
   homePage(req, res){
     res.render('index');
   },
-
-
+  spellsPage(req, res){
+    res.render('spells');
+  },
+  renderCharactersView: (req, res, characters) => {
+    res.render('characters', { characters: characters });
+  }
 };
+
+
+;
+
+
+module.exports = controller;
